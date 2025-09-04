@@ -18,10 +18,9 @@
             <td><%=nome%></td>
             <td><%=jogo%></td>
             <td><%=dti%> a <%=dtt%></td>
-            <td><%=prem%></td>
-            <td><%=sts%><td>
-            <td><a href="/torneios/edt/<%=id%>" class="btn edit"><i class="fa-solid fa-pen">‌</i></a></td>
-            <td><a href="/torneios/del/<%=id%>" class="btn delete" onclick="return confirm('Tem certeza que deseja excluir este torneio?')"><i class="fa-solid fa-box-archive">‌</i></a></td>
+            <td>R$<%=prem%></td>
+            <td><%=sts%></td>
+            <td><a href="/torneios/edt/<%=id%>" class="btn edit"><i class="fa-solid fa-pen">‌</i></a> <a href="/torneios/del/<%=id%>" class="btn delete" onclick="return confirm('Tem certeza que deseja excluir este torneio?')"><i class="fa-solid fa-box-archive">‌</i></a></td>
         </tr>
         <%}%>
         </tbody>

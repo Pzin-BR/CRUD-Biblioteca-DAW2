@@ -15,8 +15,8 @@ select:focus, select:hover {
 
 input[type="text"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="password"]:focus,
 input[type="text"]:hover, input[type="number"]:hover, input[type="email"]:hover, input[type="password"]:hover {
-  border-color: #006400 !important;
-  box-shadow: 0 2px 0 0 #006400;
+  border-color: #40468f !important;
+  box-shadow: 0 2px 0 0 #40468f;
 }
 label {
   color: #333;
@@ -33,7 +33,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="passw
   box-sizing: border-box;
 }
 .aluno-table td {
-  border-bottom: 2px solid #006400 !important; /* Verde escuro */
+  border-bottom: 2px solid #40468f !important; /* Verde escuro */
 }
 /* Visual aprimorado para formulários de edição */
 .form-visual {
@@ -47,7 +47,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="passw
   color: #555;
   font-weight: 600;
   letter-spacing: 1px;
-  border-bottom: 2px solid #006400;
+  border-bottom: 2px solid #40468f;
   padding: 16px 10px;
 }
 /* Estilos da Tabela de Alunos (igual Cursos) */
@@ -66,7 +66,7 @@ input[type="text"], input[type="number"], input[type="email"], input[type="passw
   color: #555;
   font-weight: 600;
   letter-spacing: 1px;
-  border-bottom: 2px solid #006400;
+  border-bottom: 2px solid #40468f;
   padding: 16px 10px;
 }
 .aluno-table td {
@@ -103,18 +103,18 @@ form select {
 }
   table th {
     padding: 16px 10px;
-    border-bottom: 2px solid #006400;
+    border-bottom: 2px solid #40468f;
   }
 
 .btn {
   margin-bottom: 16px;
 }
   .btn.submit {
-    background-color: #007bff;
+    background-color: #710d0d;
     color: #fff;
   }
   .btn.add {
-    background-color: #28a745;
+    background-color: #710d0d;
     color: #fff;
   }
 .btn.delete {
@@ -124,7 +124,7 @@ form select {
 /* Estilos Gerais */
 body {
   font-family: Arial, sans-serif;
-  background-color: #14532d; /* verde escuro */
+  background-color: #242a85;
   margin: 0;
   padding: 0;
   display: flex;
@@ -144,7 +144,7 @@ body {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       width: 80%;
       max-width: 100%;
-  border:8px solid #28a745; /* verde claro dos botões HOME, ALUNOS, CURSOS */
+  border:8px solid #c51616; /* verde claro dos botões HOME, ALUNOS, CURSOS */
   box-shadow: 0 0 30px 2px rgba(0,0,0,1); /* sombra preta totalmente escura após a borda */
     }
   
@@ -199,7 +199,7 @@ body {
   }
   
   .btn {
-    background-color: #28a745;
+    background-color: #c51616;
     color: #fff;
   }
   
@@ -248,7 +248,7 @@ body {
     padding: 14px 10px;
     border-bottom: 1px solid #e2e6ea;
   
-    border-bottom: 2px solid #006400;
+    border-bottom: 2px solid #40468f;
   }
   
   table tr:nth-child(even) {

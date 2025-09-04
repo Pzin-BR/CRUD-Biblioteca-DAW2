@@ -15,16 +15,16 @@
             </tr>
         </thead>
         <tbody>
-        <%for (const{nome, ano, genero, plataforma, etaria, preco, id} of Jogos) {%>
+        <%for (const{nome, ano, genero, plataforma, etaria, preco, empresa, id} of Jogos) {%>
         <tr>
             <td><%=nome%></td>
             <td><%=ano%></td>
             <td><%=genero%></td>
-            <td><%=plataforma%></td>
+            <td><%=empresa%></td>
             <td><%=etaria%></td>
+            <td><%=plataforma%></td>
             <td>R$ <%=preco%></td>
-            <td><a href="/jogos/edt/<%=id%>" class="btn edit"><i class="fa-solid fa-pen">‌</i></a></td>
-            <td><a href="/jogos/del/<%=id%>" class="btn delete" onclick="return confirm('Tem certeza que deseja excluir este jogo?')"><i class="fa-solid fa-box-archive">‌</i></a></td>
+            <td><a href="/jogos/edt/<%=id%>" class="btn edit"><i class="fa-solid fa-pen">‌</i></a> <a href="/jogos/del/<%=id%>" class="btn delete" onclick="return confirm('Tem certeza que deseja excluir este jogo?')"><i class="fa-solid fa-box-archive">‌</i></a></td>
         </tr>
         <%}%>
         </tbody>
