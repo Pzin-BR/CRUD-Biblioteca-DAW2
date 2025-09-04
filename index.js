@@ -4,6 +4,7 @@ import { dirname, join } from 'path';
 import routes from './routes/route.js'; // rotas externas
 import GenerosRoutes from './routes/GenerosRoutes.js'
 import JogosRoutes from './routes/JogosRoutes.js'
+import TorneiosRoutes from './routes/TorneiosRoutes.js'
 
 
 const app = express();
@@ -22,6 +23,7 @@ app.set('views', join(__dirname, '/views'));
 // Rotas
 app.use(JogosRoutes)
 app.use(GenerosRoutes)
+app.use(TorneiosRoutes)
 app.use(routes)
 app.listen(3003)
 // Exporta o handler compatível com Vercel

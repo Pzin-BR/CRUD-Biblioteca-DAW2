@@ -4,6 +4,7 @@ import { dirname, join } from 'path';
 import routes from '../routes/route.js'; // rotas externas
 import JogosRoutes from './routes/JogosRoutes.js';
 import GenerosRoutes from './routes/GenerosRoutes.js';
+import TorneiosRoutes from './routes/TorneiosRoutes.js';
 import { createServer } from 'http';
 
 

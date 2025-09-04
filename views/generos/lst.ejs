@@ -21,8 +21,7 @@
         <%for (const{nome, id} of Generos) {%>
         <tr>
             <td><%=nome%></td>
-            <td><a href="/generos/edt/<%=id%>" class="btn edit"><i class="fa-solid fa-pen">‌</i>&nbsp;Editar Gênero</a></td>
-            <td><a href="/generos/del/<%=id%>" class="btn delete" onclick="return confirm('Tem certeza que deseja excluir este genero?')"><i class="fa-solid fa-box-archive">‌</i>&nbsp;Excluir Gênero</a></td>
+            <td><a href="/generos/edt/<%=id%>" class="btn edit"><i class="fa-solid fa-pen">‌</i></a><a href="/generos/del/<%=id%>" class="btn delete" onclick="return confirm('Tem certeza que deseja excluir este genero?')"><i class="fa-solid fa-box-archive">‌</i></a></td>
         </tr>
         <%}%>
         </tbody>
