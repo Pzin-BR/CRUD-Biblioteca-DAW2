@@ -1,0 +1,39 @@
+<%-include('../cabecalho.ejs')%>
+<h1>Editar Jogos</h1>
+<div style="margin-bottom: 24px;">
+    <a href="/jogos/lst" class="btn">Listar</a>
+</div>
+<div>
+    <form method="post">
+        <label>Nome do Jogo:</label>
+            <input type="text" name="nome" value="<%=Jogos.nome%>"><br> 
+        <label>Ano de Lançamento:</label>
+            <input type="number" name="ano" value="<%=Jogos.ano%>"><br>
+        <label>Gênero:</label>
+            <input type="text" name="genero" value="<%=Jogos.genero%>"><br>
+        <label>Empresa Criadora</label>
+            <input type="text" name="empresa" value="<%=Jogos.empresa%>"><br>
+        <label>Plataforma</label>
+    <select name="plataforma">
+        <option value="PC">PC</option>
+        <option value="Playstation">Playstation</option>
+        <option value="Xbox">Xbox</option>
+        <option value="Nintendo Switch">Nintendo Switch</option>
+        <option value="Mobile">Mobile</option>
+        <option value="Multi-plataforma">Multi-plataforma</option>
+    </select><br>
+        <label>Classificação Etária</label>
+    <select name="etaria">
+        <option value="Livre">Livre</option>
+        <option value="10+">10+</option>
+        <option value="12+">12+</option>
+        <option value="14+">14+</option>
+        <option value="16+">16+</option>
+        <option value="18+">18+</option>
+    </select><br>
+        <label>Preço:</label>
+            <input type="number" name="preco" value="<%=Jogos.preco%>"><br>
+            <button type="submit" class="btn submit">Submeter edição</button>
+    </form>
+</div>
+    <%-include('../rodape.ejs')%>

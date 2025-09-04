@@ -2,8 +2,8 @@ import express from 'express';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import routes from './routes/route.js'; // rotas externas
-import alunoRoutes from './routes/AlunoRoutes.js'
-import cursoRoutes from './routes/CursoRoutes.js'
+import GenerosRoutes from './routes/GenerosRoutes.js'
+import JogosRoutes from './routes/JogosRoutes.js'
 
 
 const app = express();
@@ -20,9 +20,9 @@ app.use(express.static(join(__dirname, '/public')));
 app.set('views', join(__dirname, '/views'));
 
 // Rotas
-app.use(alunoRoutes)
-app.use(cursoRoutes)
+app.use(JogosRoutes)
+app.use(GenerosRoutes)
 app.use(routes)
-app.listen(3001)
+app.listen(3003)
 // Exporta o handler compatível com Vercel
 export default app;
