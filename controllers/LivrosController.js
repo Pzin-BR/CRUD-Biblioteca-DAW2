@@ -1,8 +1,8 @@
-import Jogos from '../models/jogos.js'; 
+import Livros from '../models/livros.js'; 
 
-export default class JogosController{
+export default class LivrosController{
 
-    constructor (caminhoBase = 'jogos/'){
+    constructor (caminhoBase = 'livros/'){
         this.caminhoBase = caminhoBase
 
         this.openAdd = async(req, res)=>
@@ -10,14 +10,14 @@ export default class JogosController{
             res.render(caminhoBase + "add")
         }
             this.Excluir = async(req, res)=>{
-                await Jogos.findByIdAndDelete(req.params.id)
+                await Livros.findByIdAndDelete(req.params.id)
                 res.redirect('/' + this.caminhoBase + 'lst')
             }
 
         this.add = async(req, res)=>
         {
             //cria o jogo
-            await Jogos.create
+            await Livros.create
             (
                 {
                     nome: req.body.nome,
@@ -34,24 +34,24 @@ export default class JogosController{
         }
 
         this.list = async(req, res)=>{
-            const resultado = await Jogos.find({})
-            res.render(caminhoBase + 'lst', {Jogos:resultado})
+            const resultado = await Livros.find({})
+            res.render(caminhoBase + 'lst', {Livros:resultado})
         }
 
         this.list = async(req, res)=>
         {
-            const resultado = await Jogos.find({})
-            res.render(caminhoBase + 'lst', {Jogos:resultado})
+            const resultado = await Livros.find({})
+            res.render(caminhoBase + 'lst', {Livros:resultado})
         }
         this.openEdt = async(req, res)=>
         {
             //passar quem eu quero editar
             const id = req.params.id
-            const resultado = await Jogos.findById(id)
-            res.render(caminhoBase + 'edt', {Jogos:resultado})  
+            const resultado = await Livros.findById(id)
+            res.render(caminhoBase + 'edt', {Livros:resultado})  
         }
                     this.Edt = async(req, res)=>{
-                await Jogos.findByIdAndUpdate(req.params.id, req.body)
+                await Livros.findByIdAndUpdate(req.params.id, req.body)
                 res.redirect('/' + this.caminhoBase + 'lst')
             }
     }

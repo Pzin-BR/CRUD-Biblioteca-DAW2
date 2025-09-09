@@ -1,8 +1,8 @@
-import Torneios from '../models/torneios.js'; 
+import Emprestimo from '../models/emprestimo.js'; 
 
-export default class TorneiosController{
+export default class EmprestimoController{
 
-    constructor (caminhoBase = 'torneios/'){
+    constructor (caminhoBase = 'emprestimo/'){
         this.caminhoBase = caminhoBase
 
         this.openAdd = async(req, res)=>
@@ -10,14 +10,14 @@ export default class TorneiosController{
             res.render(caminhoBase + "add")
         }
             this.Excluir = async(req, res)=>{
-                await Torneios.findByIdAndDelete(req.params.id)
+                await Emprestimo.findByIdAndDelete(req.params.id)
                 res.redirect('/' + this.caminhoBase + 'lst')
             }
 
         this.add = async(req, res)=>
         {
             //cria o jogo
-            await Torneios.create
+            await Emprestimo.create
             (
                 {
                     nome: req.body.nome,
@@ -33,24 +33,24 @@ export default class TorneiosController{
         }
 
         this.list = async(req, res)=>{
-            const resultado = await Torneios.find({})
-            res.render(caminhoBase + 'lst', {Torneios:resultado})
+            const resultado = await Emprestimo.find({})
+            res.render(caminhoBase + 'lst', {Emprestimo:resultado})
         }
 
         this.list = async(req, res)=>
         {
-            const resultado = await Torneios.find({})
-            res.render(caminhoBase + 'lst', {Torneios:resultado})
+            const resultado = await Emprestimo.find({})
+            res.render(caminhoBase + 'lst', {Emprestimo:resultado})
         }
         this.openEdt = async(req, res)=>
         {
             //passar quem eu quero editar
             const id = req.params.id
-            const resultado = await Torneios.findById(id)
-            res.render(caminhoBase + 'edt', {Torneios:resultado})  
+            const resultado = await Emprestimo.findById(id)
+            res.render(caminhoBase + 'edt', {Emprestimo:resultado})  
         }
                     this.Edt = async(req, res)=>{
-                await Torneios.findByIdAndUpdate(req.params.id, req.body)
+                await Emprestimo.findByIdAndUpdate(req.params.id, req.body)
                 res.redirect('/' + this.caminhoBase + 'lst')
             }
     }

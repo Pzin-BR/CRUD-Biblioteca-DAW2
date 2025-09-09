@@ -1,10 +1,10 @@
 import express from 'express'
 const router = express.Router()
 
-import JogosController from '../controllers/JogosController.js'
-const controle = new JogosController()
+import EmprestimoController from '../controllers/EmprestimoController.js'
+const controle = new EmprestimoController()
 
-const caminhobase = 'jogos/'
+const caminhobase = 'emprestimo/'
 
 router.get('/' + caminhobase + 'add', controle.openAdd)
 router.post('/' + caminhobase + 'add', controle.add)

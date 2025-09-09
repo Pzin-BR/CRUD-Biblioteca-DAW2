@@ -1,0 +1,32 @@
+<%-include('.. /cabecalho.ejs')%>
+    <h1>Novo Empréstimo</h1>
+    <div style="margin-bottom: 24px;">
+        <a href="/emprestimo/lst" class="btn">Listar</a>
+    </div>
+    <div>
+        <form method="post">
+
+            <label>Livro:</label>
+            <select name="livroId">
+                <% livros.forEach(function(livro) { %>
+                    <option value="<%= livro.id %>">
+                        <%= livro.titulo %>
+                    </option>
+                    <% }); %>
+            </select><br>
+
+            <label>Nome do Usuário:</label>
+            <input type="text" name="nomeUsr"><br>
+
+            <label>Email do Usuário:</label>
+            <input type="email" name="emailUsr"><br>
+
+            <label>Data de Empréstimo:</label>
+            <input type="date" name="dte"><br>
+            <label>Data de Devolução:</label>
+            <input type="date" name="dtd"><br>
+
+            <button type="submit" class="btn submit">Cadastrar</button>
+        </form>
+    </div>
+    <%-include('.. /rodape.ejs')%>

@@ -1,0 +1,43 @@
+<%-include('.. /cabecalho.ejs')%>
+    <h1>Adicionar Jogos</h1>
+    <div style="margin-bottom: 24px;">
+        <a href="/livros/lst" class="btn">Listar</a>
+    </div>
+    <div>
+        <form method="post">
+            <label>Título do Livro:</label>
+            <input type="text" name="titulo"><br>
+
+            <label>Autor:</label>
+            <input type="text" name="autor"><br>
+
+            <label>Ano de Lançamento:</label>
+            <input type="number" name="ano"><br>
+
+            <label>Categoria:</label>
+            <select name="categoria">
+                <option value="Romance">Romance</option>
+                <option value="Tecnologia">Tecnologia</option>
+                <option value="Drama">Drama</option>
+                <option value="Ficcao-Cientifica">Ficção Científica</option>
+            </select><br>
+
+            <label>ISBN:</label>
+            <input type="text" name="isbn"><br>
+
+            <label>Editora:</label>
+            <input type="text" name="editora"><br>
+
+            <label>Páginas:</label>
+            <input type="number" name="paginas"><br>
+
+            <label>Disponibilidade:</label>
+            <select name="disponibilidade">
+                <option value="Disponivel">Disponível</option>
+                <option value="Emprestado">Emprestado</option>
+            </select><br>
+
+            <button type="submit" class="btn submit">Adicionar Livro</button>
+        </form>
+    </div>
+    <%-include('.. /rodape.ejs')%>
