@@ -1,4 +1,4 @@
-<%-include('.. /cabecalho.ejs')%>
+<%-include('../cabecalho.ejs')%>
     <h1>Novo Empréstimo</h1>
     <div style="margin-bottom: 24px;">
         <a href="/emprestimo/lst" class="btn">Listar</a>
@@ -7,12 +7,10 @@
         <form method="post">
 
             <label>Livro:</label>
-            <select name="livroId">
-                <% livros.forEach(function(livro) { %>
-                    <option value="<%= livro.id %>">
-                        <%= livro.titulo %>
-                    </option>
-                    <% }); %>
+            <select name="titulo">
+                <% Livros.forEach(function(Livro) { %>
+                    <option value="<%= Livro.titulo %>"><%= Livro.titulo %></option>
+                <% }); %>
             </select><br>
 
             <label>Nome do Usuário:</label>
@@ -29,4 +27,4 @@
             <button type="submit" class="btn submit">Cadastrar</button>
         </form>
     </div>
-    <%-include('.. /rodape.ejs')%>
+    <%-include('../rodape.ejs')%>

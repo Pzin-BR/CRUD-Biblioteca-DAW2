@@ -1,42 +1,26 @@
-<%-include('.. /cabecalho.ejs')%>
+<%-include('../cabecalho.ejs')%>
     <h1>Editar Empréstimos</h1>
     <div style="margin-bottom: 24px;">
         <a href="/emprestimo/lst" class="btn">Listar</a>
     </div>
     <div>
         <form method="post">
-            <label>Nome do Torneio:</label>
-            <input type="text" name="nome" value="<%=Torneios.nome%>"><br>
-            <label>Jogo:</label>
-            <select name="jogo">
-                <option value="League of Legends">League of Legends</option>
-                <option value="Counter-Strike: Global Offensive">Counter-Strike: Global Offensive</option>
-                <option value="Dota 2">Dota 2</option>
-                <option value="Fortnite">Fortnite</option>
-                <option value="Valorant">Valorant</option>
-                <option value="Overwatch">Overwatch</option>
-                <option value="Call of Duty">Call of Duty</option>
-                <option value="Apex Legends">Apex Legends</option>
-                <option value="Rainbow Six Siege">Rainbow Six Siege</option>
-                <option value="FIFA">FIFA</option>
-                <option value="Rocket League">Rocket League</option>
-                <option value="PUBG">PUBG</option>
-                <option value="Hearthstone">Hearthstone</option>
-                <option value="StarCraft II">StarCraft II</option>
-                <option value="Smash Bros. Ultimate">Smash Bros. Ultimate</option>
-                <label>Data de Início</label>
-                <input type="date" name="dti" value="<%=Torneios.dti%>"><br>
-                <label>Data de Término</label>
-                <input type="date" name="dtt" value="<%=Torneios.dtt%>"><br>
-                <label>Premiação (R$):</label>
-                <input type="number" name="prem" value="<%=Torneios.prem%>"><br>
-                <label>Status:</label>
-                <select name="sts">
-                    <option value="Inscrições Abertas">Inscrições Abertas</option>
-                    <option value="Em Andamento">Em Andamento</option>
-                    <option value="Finalizado">Finalizado</option>
-                </select><br>
+            <label>Livro:</label>
+            <select name="titulo">
+                <% Livros.forEach(function(Livro) { %>
+                    <option value="<%= Livro.titulo %>" <%= Livro.titulo === emprestimo.titulo ? 'selected' : '' %>><%= Livro.titulo %></option>
+                <% }); %>
+            </select><br>
+            <label>Nome do Usuário:</label>
+            <input type="text" name="nomeUsr" value="<%=emprestimo.nomeUsr%>" required>
+            <label>Email do Usuário:</label>
+            <input type="email" name="emailUsr" value="<%=emprestimo.emailUsr%>" required>
+            <label>Data de Empréstimo:</label>
+            <input type="date" name="dte" value="<%=emprestimo.dte.toISOString().split('T')[0]%>" required>
+            <label>Data de Devolução:</label>
+            <input type="date" name="dtd" value="<%=emprestimo.dtd.toISOString().split('T')[0]%>" required>
+            <br>
                 <button type="submit" class="btn submit">Submeter edição</button>
         </form>
     </div>
-    <%-include('.. /rodape.ejs')%>
+    <%-include('../rodape.ejs')%>

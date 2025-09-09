@@ -1,4 +1,4 @@
-<%-include('.. /cabecalho.ejs')%>
+<%-include('../cabecalho.ejs')%>
     <h1>Editar Livros</h1>
     <div style="margin-bottom: 24px;">
         <a href="/livros/lst" class="btn">Listar</a>
@@ -17,10 +17,19 @@
 
             <label>Categoria:</label>
             <select name="cateogria">
+                <option value="Ficção">Ficção</option>
+                <option value="Não-Ficção">Não-Ficção</option>
+                <option value="Fantasia">Fantasia</option>
                 <option value="Romance">Romance</option>
+                <option value="Terror">Terror</option>
+                <option value="Mistério">Mistério</option>
+                <option value="Biografia">Biografia</option>
+                <option value="História">História</option>
+                <option value="Autoajuda">Autoajuda</option>
+                <option value="Ciência">Ciência</option>
                 <option value="Tecnologia">Tecnologia</option>
-                <option value="Drama">Drama</option>
-                <option value="Ficcao-Cientifica">Ficção Científica</option>
+                <option value="Artes">Artes</option>
+                <option value="Outros">Outros</option>
             </select><br>
 
             <label>ISBN:</label>
@@ -41,4 +50,4 @@
             <button type="submit" class="btn submit">Submeter edição</button>
         </form>
     </div>
-    <%-include('.. /rodape.ejs')%>
+    <%-include('../rodape.ejs')%>

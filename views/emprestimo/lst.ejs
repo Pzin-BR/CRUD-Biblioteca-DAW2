@@ -1,29 +1,35 @@
 <%-include('../cabecalho.ejs')%>
-    <h1 style="text-align:center; margin-bottom:32px; color:#333;">Torneios</h1>
-    <a href="/torneios/add" class="btn add" style="margin-bottom:32px;">Adicionar Torneio</a>
+    <h1 style="text-align:center; margin-bottom:32px; color:#333;">Empréstimos</h1>
+    <a href="/emprestimo/add" class="btn add" style="margin-bottom:32px;">Adicionar Empréstimo</a>
     <table class="curso-table" style="margin-top:24px;">
         <thead>
             <tr style="background:#e9ecef; color:#333;">
-                <th>Nome do Torneio</th>
-                <th>Jogo</th>
-                <th>Período</th>
-                <th>Premiação</th>
-                <th>Status</th>
-                <th colspan="2" style="text-align:center;">Ações</th>
+                <th>Livro:</th>
+                <th>Nome do Usuário:</th>
+                <th>Email do Usuário:</th>
+                <th>Data de Empréstimo:</th>
+                <th>Data de Devolução:</th>
+                <th>Ações:</th>
             </tr>
         </thead>
         <tbody>
-        <%for (const{nome, jogo, dti, dtt, prem, sts, id} of Torneios) {%>
+        <% for(let {id, livro, nomeUsr, emailUsr, dte, dtd} of emprestimo) {%>
         <tr>
-            <td><%=nome%></td>
-            <td><%=jogo%></td>
-            <td><%=dti%> a <%=dtt%></td>
-            <td>R$<%=prem%></td>
-            <td><%=sts%></td>
-            <td><a href="/torneios/edt/<%=id%>" class="btn edit"><i class="fa-solid fa-pen">‌</i></a> <a href="/torneios/del/<%=id%>" class="btn delete" onclick="return confirm('Tem certeza que deseja excluir este torneio?')"><i class="fa-solid fa-box-archive">‌</i></a></td>
+            <td><%=livro%></td>
+            <td><%=nomeUsr%></td>
+            <td><%=emailUsr%></td>
+            <td><%=new Date(dte).toLocaleDateString('pt-BR')%></td>
+            <td><%=new Date(dtd).toLocaleDateString('pt-BR')%></td>
+            <td><a href="/emprestimo/edt/<%=id%>" class="btn edit"><i class="fa-solid fa-pen">‌</i></a> <a href="/emprestimo/del/<%=id%>" class="btn delete" onclick="return confirm('Tem certeza que deseja excluir este torneio?')"><i class="fa-solid fa-box-archive">‌</i></a></td>
         </tr>
         <%}%>
         </tbody>
     </table>
     
+//livro: {type:String, required:true},
+    nomeUsr: {type:String, required:true},
+    emailUsr: {type:String, required:true},
+    dte: {type:Date, required:true},
+    dtd: {type:Date, required:true},
+
 <%-include('../rodape.ejs')%>

@@ -2,9 +2,9 @@ import express from 'express';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import routes from '../routes/route.js'; // rotas externas
-import JogosRoutes from './routes/JogosRoutes.js';
-import GenerosRoutes from './routes/GenerosRoutes.js';
-import TorneiosRoutes from './routes/TorneiosRoutes.js';
+import LivrosRoutes from './routes/LivrosRoutes.js';
+import CategoriasRoutes from './routes/CategoriasRoutes.js';
+import EmprestimoRoutes from './routes/EmprestimoRoutes.js';
 import { createServer } from 'http';
 
 

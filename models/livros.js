@@ -1,7 +1,7 @@
 import conexao from '../config/conexao.js'
 
 const Livros = conexao.Schema({
-    titulo: {type:Stryng, required:true},
+    titulo: {type:String, required:true},
     autor: {type:String, required:true},
     ano: {type:Number, required:true},
     categoria: {type:String, required:true},
