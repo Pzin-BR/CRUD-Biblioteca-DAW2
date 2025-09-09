@@ -25,6 +25,6 @@ app.use(LivrosRoutes)
 app.use(CategoriasRoutes)
 app.use(EmprestimoRoutes)
 app.use(routes)
-app.listen(3003)
+app.listen(3004)
 // Exporta o handler compatível com Vercel
 export default app;

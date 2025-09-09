@@ -16,10 +16,10 @@
             </tr>
         </thead>
         <tbody>
-            <%for (const{titulo, autor, ano, categoria, isbn, editora, paginas, disponibilidade} of Livros) {%>
+            <%for (const{titulo, autor, ano, categoria, isbn, editora, paginas, disponibilidade, id} of Livros) {%>
                 <tr>
                     <td>
-                        <%titulo%>
+                        <%=titulo%>
                     </td>
                     <td>
                         <%=autor%>
@@ -37,10 +37,10 @@
                         <%=editora%>
                     </td>
                     <td>
-                        <%paginas%>
+                        <%=paginas%>
                     </td>
                     <td>
-                        <%disponibilidade%>
+                        <%=disponibilidade%>
                     </td>
                     <td><a href="/livros/edt/<%=id%>" class="btn edit"><i class="fa-solid fa-pen">‌</i></a> <a
                             href="/livros/del/<%=id%>" class="btn delete"

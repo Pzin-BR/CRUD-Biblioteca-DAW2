@@ -17,16 +17,18 @@ export default class LivrosController{
         this.add = async(req, res)=>
         {
             //cria o jogo
+            console.log(req.body) //Veja o que está chegando do formulário
             await Livros.create
             (
                 {
-                    nome: req.body.nome,
-                    ano: req.body.ano,
-                    genero: req.body.genero,
-                    etaria: req.body.etaria,
-                    empresa: req.body.empresa,
-                    plataforma: req.body.plataforma,
-                    preco: req.body.preco
+                    titulo: req.body.titulo,
+                    autor: req.body.autor,
+                    ano: req.body.ano, 
+                    categoria: req.body.categoria,
+                    isbn: req.body.isbn,
+                    editora: req.body.editora,
+                    paginas: req.body.paginas,
+                    disponibilidade: req.body.disponibilidade
                 }
 
                             )

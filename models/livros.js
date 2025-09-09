@@ -8,7 +8,7 @@ const Livros = conexao.Schema({
     isbn: {type:String, required:true},
     editora: {type:String, required:true},
     paginas: {type:Number, required:true},
-    disponibilidade: {type:String, required:true}
+    disponibilidade: {type:String, required:true},
 }) 
 
 export default conexao.model('Livros',Livros)

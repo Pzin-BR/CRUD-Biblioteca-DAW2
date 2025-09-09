@@ -22,7 +22,7 @@ export default class CategoriasController
             await Categorias.create
             (
                 {
-                    nome: req.body.nome,
+                    nome: req.body.nome
                 }
 
             )

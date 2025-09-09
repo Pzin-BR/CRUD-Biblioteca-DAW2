@@ -20,12 +20,11 @@ export default class EmprestimoController{
             await Emprestimo.create
             (
                 {
-                    nome: req.body.nome,
-                    jogo: req.body.jogo,
-                    dti: req.body.dti,
-                    dtt: req.body.dtt,
-                    prem: req.body.prem,
-                    sts: req.body.sts
+                    livro: req.body.livro,
+                    nomeUsr: req.body.nomeUsr,
+                    emailUsr: req.body.emailUsr,
+                    dte: req.body.dte, 
+                    dtd: req.body.dtd
                 }
 
                             )
